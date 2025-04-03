@@ -1,0 +1,9 @@
+<div class="indexFlex">
+    {% for product in collections.frontpage.products %}  <!-- Fixed syntax: removed brackets -->
+        <div class="product-card">
+            <img src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.title }}" loading="lazy" width="200px">
+            <h1>{{ product.title }}</h1>
+            <p>{{ product.price | money }}</p>
+        </div>
+    {% endfor %}
+</div>
